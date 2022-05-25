@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="new">
+    <ion-title>Añadir perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goToHome()"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input
+            placeholder="Nombre de usuario"
+            type="text"
+            #user
+          ></ion-input>
+          <ion-input placeholder="Nombre" type="text" #name></ion-input>
+          <ion-input
+            placeholder="Correo electrónica¡o"
+            type="email"
+            #mail
+            placeholder="user@mail.com"
+          ></ion-input>
+          <img src="{{cardImageBase64}}" #image />
+
+          <input
+            type="file"
+            class="file-input"
+            (change)="onFileSelected($event)"
+            #fileUpload
+          />
+          <ion-button
+            color="success"
+            expand="block"
+            (click)="saveNewProfile(user, name, mail)"
+          >
+            Guardar
+          </ion-button>
+          <ion-button color="new" expand="block" (click)="goToHome()">
+            Cancelar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>FCL 2022</ion-title>
+  </ion-toolbar>
+</ion-footer>

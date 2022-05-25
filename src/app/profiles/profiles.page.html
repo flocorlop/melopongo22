@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="profile">
+    <ion-title>Me lo pongo</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="profile">
+    <ion-title slot="secondary">Perfiles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="goHome()" color="new">
+    <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content>
+  <ion-list>
+    <app-profile-item
+      *ngFor="let profile of profiles"
+      [profileItem]="profile"
+    ></app-profile-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="profile" (click)="addNewProfile()" type="button">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>FCL 2022</ion-title>
+  </ion-toolbar>
+</ion-footer>

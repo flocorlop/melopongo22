@@ -1,0 +1,8 @@
+<ion-card [routerLink]="['/outfits', outfitItem.id]">
+  <ion-img [src]="outfitItem.imageURL"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{ outfitItem.title }}</ion-card-subtitle>
+    <ion-card-title>{{ outfitItem.percentage }}%</ion-card-title>
+  </ion-card-header>
+  <ion-card-content> {{ outfitItem.description }}</ion-card-content>
+</ion-card>
