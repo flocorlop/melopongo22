@@ -46,7 +46,7 @@ export class OutfitAddPage implements OnInit {
           "description": desc.value
         }];
 
-      this.resultSave = this.http.post('http://10.128.0.2:4000/outfits/new-outfit/save', data)
+      this.resultSave = this.http.post('http://34.72.164.39:4000/outfits/new-outfit/save', data)
         .subscribe(res => {
           this.resultSave = res;
         });
@@ -111,7 +111,7 @@ export class OutfitAddPage implements OnInit {
     } else {
       const data = [{ "image_encoded": this.cardImageBase64 }];
 
-      this.predictionRes = this.http.post('http://10.128.0.2:4000/outfits/new-outfit/predict', data)
+      this.predictionRes = this.http.post('http://34.72.164.39:4000/outfits/new-outfit/predict', data)
         .subscribe(res => {
           this.predictionRes = res;
           let predictionResN = this.predictionRes.prediction.res;
