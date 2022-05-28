@@ -58,7 +58,7 @@ export class ProfileEditPage implements OnInit {
           "photo": this.cardImageBase64
         }];
 
-      this.resultSave = this.http.post('http://34.72.164.39:4000/profiles/edit/save', data)
+      this.resultSave = this.http.post('http://35.203.100.53:4000/profiles/edit/save', data)
         .subscribe(res => {
           this.resultSave = res;
         });

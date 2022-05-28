@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class OutfitsService {
 
-  urlGetOutfits = 'http://34.72.164.39:4000/outfits';
+  urlGetOutfits = 'http://35.203.100.53:4000/outfits';
   status;
   errorMessage;
 
