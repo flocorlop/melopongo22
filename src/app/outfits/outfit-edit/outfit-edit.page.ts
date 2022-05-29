@@ -56,7 +56,7 @@ export class OutfitEditPage implements OnInit {
           "id": this.outfit.id
         }];
 
-      this.resultSave = this.http.post('http://35.203.100.53:4000/outfits/edit/save', data)
+      this.resultSave = this.http.post('http://35.203.100.53:4000/api/outfits/edit/save', data)
         .subscribe(res => {
           this.resultSave = res;
         });

@@ -6,7 +6,7 @@ import { Observable, throwError } from 'rxjs';
   providedIn: "root"
 })
 export class ProfileService {
-  url = 'http://35.203.100.53:4000/profiles';
+  url = 'http://35.203.100.53:4000/api/profiles';
   status;
   errorMessage;
 

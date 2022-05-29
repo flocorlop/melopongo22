@@ -48,7 +48,7 @@ export class ProfileAddPage implements OnInit {
             "photo": this.cardImageBase64
           }];
 
-        this.resultSave = this.http.post('http://35.203.100.53:4000/profiles/new-profile/save', data)
+        this.resultSave = this.http.post('http://35.203.100.53:4000/api/profiles/new-profile/save', data)
           .subscribe(res => {
             this.resultSave = res;
           });
